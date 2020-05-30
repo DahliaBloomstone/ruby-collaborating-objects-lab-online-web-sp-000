@@ -1,7 +1,7 @@
 class Artist
   attr_accessor :name, :songs
 
-  @@all = []
+  @@all = [] #creates new array of all song instances 
 
   def initialize(name) #accepts a name for the artist
     @name = name #sets the artist name
@@ -9,7 +9,7 @@ class Artist
     save
   end
 
-  def self.all
+  def self.all #returns all existing Artist instances
     @@all
   end
 
