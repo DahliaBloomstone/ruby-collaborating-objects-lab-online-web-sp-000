@@ -1,7 +1,7 @@
 class Artist
   attr_accessor :name, :songs
 
-  @@all = [] #creates new array of all song instances 
+  @@all = [] #creates new array of all song instances
 
   def initialize(name) #accepts a name for the artist
     @name = name #sets the artist name
@@ -11,6 +11,10 @@ class Artist
 
   def self.all #returns all existing Artist instances
     @@all
+  end
+
+  def add_song(song)
+    @songs << song
   end
 
   def self.create(name)
@@ -25,10 +29,6 @@ class Artist
 
   def self.find_or_create_by_name(name)
     self.find(name) || self.create(name)
-  end
-
-  def add_song(song)
-    @songs << song
   end
 
   def print_songs
