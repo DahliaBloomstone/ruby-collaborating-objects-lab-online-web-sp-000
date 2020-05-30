@@ -17,7 +17,7 @@ class Artist
     @songs << song
   end
 
-  def self.create(name)
+  def self.create(name) #returns artist instance,
     artist = self.new(name)
     artist.name = name
     artist
@@ -27,15 +27,15 @@ class Artist
     self.all.detect { |artist| artist.name == name }
   end
 
-  def self.find_or_create_by_name(name)   #returns artist instance, creates new instance of artist if none exist
+  def self.find_or_create_by_name(name) #creates new instance of artist if none exist
     self.find(name) || self.create(name)
   end
 
-  def print_songs
+  def print_songs #lists all of artists songs
     songs.each { |song| puts song.name }
   end
 
-  def save
+  def save #saves all instances of artist self and shovels them into the song array 
     @@all << self
   end
 
