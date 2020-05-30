@@ -7,9 +7,12 @@ class Artist
     @name = name
     @songs = [ ]
   end
-  def self.all
-    @@all #displays the all array
+
+  def songs
+    Song.all.select do |song|
+      song.artist == self #displays the all array
   end
+end 
 
   def add_song(song)
     @songs << song
