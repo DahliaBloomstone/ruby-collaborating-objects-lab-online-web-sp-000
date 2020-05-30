@@ -23,11 +23,11 @@ class Artist
     artist
   end
 
-  def self.find(name)
+  def self.find(name) #finds/creates unique object an artist by name
     self.all.detect { |artist| artist.name == name }
   end
 
-  def self.find_or_create_by_name(name)   #returns artist instance, creates unique object an artist by name, creates new instance of artist if none exist 
+  def self.find_or_create_by_name(name)   #returns artist instance, creates new instance of artist if none exist
     self.find(name) || self.create(name)
   end
 
