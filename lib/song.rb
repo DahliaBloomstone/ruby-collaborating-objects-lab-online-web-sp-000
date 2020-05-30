@@ -1,14 +1,14 @@
 class Song
 
   attr_accessor :name, :artist
-@@all = [ ]
+@@all = [ ] #starts at an empty array for all song instances 
 
   def initialize(name)
     @name = name
-    @@all << self 
+    @@all << self
   end
 
-def self.all
+def self.all #returns all existing song instances
   @@all
 end
 
