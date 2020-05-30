@@ -22,5 +22,4 @@ class MP3Importer
         self.artist.name = name
       end
     end
-  end
 end
