@@ -11,6 +11,7 @@ class Artist
   def save
     @@all << self #saves the artist name to the all array
   end
+  
   def add_song(song)
     @songs << song
   end
