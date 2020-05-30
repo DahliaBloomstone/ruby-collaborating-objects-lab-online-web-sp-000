@@ -10,9 +10,9 @@ class Artist
 
   def songs
     Song.all.select do |song|
-      song.artist == self #displays the all array
+      song.artist == self       #displays the all array
   end
-end 
+end
 
   def add_song(song)
     @songs << song
