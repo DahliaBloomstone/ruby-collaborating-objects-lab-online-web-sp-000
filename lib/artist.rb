@@ -8,12 +8,6 @@ class Artist
     @songs = [ ]
   end
 
-  def songs
-    Song.all.select do |song|
-      song.artist == self       #displays the all array
-  end
-end
-
   def add_song(song)
     @songs << song
   end
