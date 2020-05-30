@@ -13,7 +13,7 @@ class Artist
     @@all
   end
 
-  def add_song(song)
+  def add_song(song) #keeps track of an artist's songs
     @songs << song
   end
 
@@ -27,7 +27,7 @@ class Artist
     self.all.detect { |artist| artist.name == name }
   end
 
-  def self.find_or_create_by_name(name)
+  def self.find_or_create_by_name(name)   #returns artist instance, creates unique object an artist by name, creates new instance of artist if none exist 
     self.find(name) || self.create(name)
   end
 
@@ -39,7 +39,7 @@ class Artist
     @@all << self
   end
 
-  def songs
+  def songs  #lists all songs that belong to this artist
     @songs
   end
 end
